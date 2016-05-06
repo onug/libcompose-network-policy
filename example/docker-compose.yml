@@ -1,0 +1,12 @@
+web:
+  image: web
+  ports:
+   - "5000:5000"
+  links:
+   - redis
+  labels:
+   io.contiv.tenant: "blue"
+redis:
+  image: redis
+  labels:
+   io.contiv.tenant: "blue"
